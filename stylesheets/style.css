@@ -340,7 +340,7 @@ img {
 	width: 27px;
 }
 .text-container {
-	margin-left: 55px
+	margin-left: 55px;
 }
 .more {
 	font-size: 10px;
@@ -509,6 +509,9 @@ h2 .date {
     display: none
 }
 @media only screen and (max-width: 650px) {
+#header, #nav-wrap #nav {
+    padding-bottom: 20px
+}
 #left-column, #right-column, #content, #sidebar {
  width: 100%;
  display: block;
@@ -523,16 +526,14 @@ h2 .date {
 #search {
  display: none
 }
-#sidebar {
- margin-bottom: 20px;
- border-bottom: 1px dashed #ccc
-}
-#submenu, #thirdmenu {
+#submenu, #thirdmenu, #sidebar {
     display: none
 }
 #wrap #mobile-submenu, #wrap #mobile-thirdmenu {
     display: block;
-    margin: 0 0 13px 0
+    margin: 0 0 11px;
+    padding-bottom: 11px;
+    border-bottom: 1px dashed #ccc
 }
 #mobile-submenu li, #mobile-thirdmenu li {
  display: inline-block;
@@ -581,16 +582,15 @@ color: #222
 }
 #nav .active a {
  color: #fff;
+ padding: 0
 }
 #nav a {
  color: #333;
+ padding: 0
 }
 #nav a:hover {
  border-bottom: none;
  margin-bottom: 0
-}
-#nav a:hover {
-    color: #202020
 }
 #page-top {
  padding-bottom: 0
