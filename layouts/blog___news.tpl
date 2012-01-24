@@ -22,6 +22,7 @@
       <div id="sidebar"> {% include "Submenu" %} </div>
       <!-- //sidebar -->
       <div id="content">
+       {% if editmode %}<p>{% addbutton class="add-article" %}</p>{% endif %}
         <ul id="blog-list">
           {% for article in articles %}
           <li> <span class="date">{{article.created_at | format_date:"%d.%m"}}</span>

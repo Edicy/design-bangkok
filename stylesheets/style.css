@@ -63,7 +63,7 @@ img {
 .header-wrap {
 	max-width: 940px;
 	margin: 0 auto;
-	background: url('../images/lilled.png?1') no-repeat center left;
+	background: url('../images/flowers.png?1') no-repeat center left;
 	padding: 0 19px
 }
 #page-top {
@@ -508,6 +508,9 @@ h2 .date {
 #mobile-submenu, #mobile-thirdmenu {
     display: none
 }
+.placeholder { color: #bdddf0 !important }
+::-webkit-input-placeholder { color: #bdddf0 !important }
+:-moz-placeholder { color: #bdddf0 !important }
 @media only screen and (max-width: 650px) {
 #header, #nav-wrap #nav {
     padding-bottom: 20px
@@ -582,11 +585,11 @@ color: #222
 }
 #nav .active a {
  color: #fff;
- padding: 0
+ padding: 3px 0
 }
 #nav a {
  color: #333;
- padding: 0
+ padding: 3px 0
 }
 #nav a:hover {
  border-bottom: none;
