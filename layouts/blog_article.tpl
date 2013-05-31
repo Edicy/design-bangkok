@@ -26,6 +26,23 @@
         <p><span class="author">{{article.author.name}}</span> / {{article.created_at | format_date:"long"}}{% unless article.comments_count == 0 %} / <span class="comments">{{"comments" | lc}}</span> <a href="{{article.url}}#comments" class="comments-nr edy-site-blog-comments-count">{{article.comments_count}}</a>{% endunless %}</p>
         <div class="excerpt">{% editable article.excerpt %}</div>
         {% editable article.body %}
+        
+        {% if editmode %}
+            <div class="cfx article-tags">
+                <div class="article-tag-icon"></div>
+                {% editable article.tags %}
+            </div>
+          {% else %}
+            {% unless article.tags == empty %}
+                <div class="cfx article-tags">
+                    <div class="article-tag-icon"></div>
+                    {% for tag in article.tags %}
+                        <a href="{{ article.page.url }}/tagged/{{ tag.path }}">{{ tag.name }}</a>{% unless forloop.last %}, {% endunless %}
+                    {% endfor %}
+                </div>
+            {% endunless %}
+        {% endif %}
+        
         {% unless article.comments_count == 0 %}
         <div id="comments">
           <h2>{% case article.comments_count %}{% when 0 %}{{"no_comments"|lc}}{% else %}{{"comments_for_count"|lc}}: <span class="edy-site-blog-comments-count">{{article.comments_count}}</span>{% endcase %}</h2>
@@ -33,7 +50,7 @@
             {% for comment in article.comments %}
             <li class="edy-site-blog-comment">
               <p><span class="comment-author">{{comment.author}}</span> <span class="comment-date">{{comment.created_at | format_date:"short"}}</span>{% removebutton %}</p>
-              {{comment.body}} </li>
+              {{comment.body_html}} </li>
             {% endfor %}
           </ul>
         </div>

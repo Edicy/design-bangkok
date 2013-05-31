@@ -21,7 +21,18 @@
     {% include "Mobilemenu" %}
       <div id="sidebar"> {% include "Submenu" %} </div>
       <!-- //sidebar -->
-      <div id="content">
+     <div id="content">
+       {% if tags %}
+            <div class="tagged-list-header">
+                <div class="header-tag-icon"></div>
+                {% if tags == empty %}
+                    {{ "no_posts_tagged" | lc }}
+                {% else %}
+                    {{ "posts_tagged" | lc }} '{{ tags | sort:"name" | map:"name" | join:"', '"}}'.
+                {% endif %}
+            </div>
+        {% endif %}
+      
        {% if editmode %}<p>{% addbutton class="add-article" %}</p>{% endif %}
         <ul id="blog-list">
           {% for article in articles %}
