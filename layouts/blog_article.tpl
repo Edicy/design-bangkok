@@ -24,8 +24,8 @@
       <div id="content">
         <h2>{% editable article.title %}</h2>
         <p><span class="author">{{article.author.name}}</span> / {{article.created_at | format_date:"long"}}{% unless article.comments_count == 0 %} / <span class="comments">{{"comments" | lc}}</span> <a href="{{article.url}}#comments" class="comments-nr edy-site-blog-comments-count">{{article.comments_count}}</a>{% endunless %}</p>
-        <div class="excerpt">{% editable article.excerpt %}</div>
-        {% editable article.body %}
+        <div class="excerpt" data-search-indexing-allowed="true">{% editable article.excerpt %}</div>
+        <div data-search-indexing-allowed="true">{% editable article.body %}</div>
         
         {% if editmode %}
             <div class="cfx article-tags">

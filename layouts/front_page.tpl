@@ -13,7 +13,7 @@
   <!-- //header -->
   {% include "Mainmenu" %}
   <div id="content-wrap" class="clear">
-    <div id="left-column">
+    <div id="left-column" data-search-indexing-allowed="true">
       {% content %}
     </div>
     <div id="right-column">

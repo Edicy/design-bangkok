@@ -21,7 +21,7 @@
       {% include "Mobilemenu" %}
       <div id="sidebar"> {% include "Submenu" %} </div>
       <!-- //sidebar -->
-      <div id="content"> {% content %} </div>
+      <div id="content" data-search-indexing-allowed="true"> {% content %} </div>
       <!-- //content -->
     </div>
     <!-- //content wrap -->
