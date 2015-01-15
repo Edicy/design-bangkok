@@ -99,7 +99,7 @@
   ],
   "assets": [
     {
-      "content_type": "application/vnd.ms-fontobject",
+      "content_type": "font/eot",
       "file": "assets/chunkfive-webfont.eot",
       "kind": "assets",
       "filename": "chunkfive-webfont.eot"
@@ -117,7 +117,7 @@
       "filename": "header-tag.svg"
     },
     {
-      "content_type": "application/vnd.ms-fontobject",
+      "content_type": "font/eot",
       "file": "assets/oswald-webfont.eot",
       "kind": "assets",
       "filename": "oswald-webfont.eot"
