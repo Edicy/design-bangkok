@@ -211,7 +211,7 @@ img {
 	border-bottom: 6px solid #fff;
     margin-bottom: -6px
 }
-#nav a {
+#nav a:not(.edy-cbtn) {
 	font-family: 'OswaldRegular', Helvetica, Arial, Verdana, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -221,6 +221,14 @@ img {
 	line-height: 17px;
 	padding: 7px 14px;
 	position: relative
+}
+#nav a.edy-cbtn {
+	display: inline-block;
+	margin: 7px 14px;
+}
+#nav a.edy-cbtn:hover {
+	display: inline-block;
+	border-bottom: none;
 }
 #nav .active {
 	height: 49px;
