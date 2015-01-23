@@ -68,6 +68,14 @@ img {
   hyphens: auto;
 }
 
+.content-hyphenate {
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
 /* => MAIN SECTIONS */
 #wrap {
 	background: url('../images/flowers.png?1') no-repeat top left;
@@ -700,4 +708,10 @@ color: #222
 #comment-form .form_submit input {
     margin-left: 0
 }
+}
+
+#content .edy-btn-removecomment {
+  position: relative;
+  top: 1px;
+  line-height: 0 !important;
 }

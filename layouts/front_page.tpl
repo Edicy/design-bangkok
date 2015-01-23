@@ -4,7 +4,7 @@
 {% include "SiteHeader" %}
 </head>
 <body id="front">
-<div id="wrap">
+<div id="wrap" class="content-hyphenate">
   <div id="header" class="clear">
       {% include "Langmenu" %}
     <div id="logo">{% editable site.header %}</div>

@@ -4,7 +4,7 @@
 {% include "SiteHeader" %}
 </head>
 <body>
-<div id="page-top">
+<div id="page-top" class="content-hyphenate">
   <div class="header-wrap">
     <div id="header" class="clear">
           {% include "Langmenu" %}
@@ -15,7 +15,7 @@
     {% include "Mainmenu" %} </div>
 </div>
 <!-- //page-top -->
-<div id="page-bottom">
+<div id="page-bottom" class="content-hyphenate">
   <div id="wrap">
     <div id="content-wrap" class="clear">
       {% include "Mobilemenu" %}
